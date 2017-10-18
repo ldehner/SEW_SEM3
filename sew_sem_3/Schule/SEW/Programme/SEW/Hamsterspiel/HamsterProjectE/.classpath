@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="bluejext.jar"/>
+	<classpathentry kind="lib" path="bluejhamstersimulator.jar"/>
+	<classpathentry kind="lib" path="StaticHamster.jar"/>
+	<classpathentry kind="lib" path="tools.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

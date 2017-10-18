@@ -1,0 +1,91 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_2_5_methoden {
+
+	public static int tag(String datum){
+		int tag = 0;
+		String day;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		
+		if(tt == '.'){
+			day = "" + t;
+		}
+		else{
+			day =""+t+tt;
+		}
+		tag = Integer.parseInt(day);
+		
+		return tag;
+	
+	}
+	public static int monat(String datum){
+		int monat = 0;
+		String month;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		char point = datum.charAt(2);
+		char m = datum.charAt(3);
+		char mm = datum.charAt(4);
+		
+		if(tt == '.'){
+			if(mm == '.'){
+				month = "" + point + m;
+			}
+			else{
+				month = "" + point;
+			}
+			
+		}
+		else{
+			month =""+m+mm;
+		}
+		monat = Integer.parseInt(month);
+		
+		
+		return monat;
+	}
+	public static int jahr(String datum){
+		int jahr = 0;
+		String year;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		char pointone = datum.charAt(2);
+		char m = datum.charAt(3);
+		char mm = datum.charAt(4);
+		char pointtwo = datum.charAt(5);
+		char j;
+		char jj;
+		char jjj;
+		char jjjj;
+		int x = 2;
+		 int laenge;
+		 char zeichen;
+		 char ges = '.';
+		 int lang = 0;
+		 laenge = datum.length() - 1;
+		 boolean schleife = true;
+
+		 for(;lang <= laenge && x >= 0;lang++){
+			 if (schleife == true){
+				 zeichen = datum.charAt(lang);
+				 if(ges == zeichen){
+					 x--;
+				 }
+			 }
+		 }
+	
+			 j = datum.charAt(lang);
+			 jj = datum.charAt(lang+1);
+			 jjj = datum.charAt(lang+2);
+			 jjjj = datum.charAt(lang+3);
+		 
+year = "" + j+ jj+jjj+jjjj;
+		jahr = Integer.parseInt(year);
+		
+		
+		return jahr;
+	}
+
+}

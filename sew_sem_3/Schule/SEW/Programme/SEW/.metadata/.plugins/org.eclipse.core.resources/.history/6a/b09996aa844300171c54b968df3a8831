@@ -1,0 +1,36 @@
+package SEW_3;
+/**
+ * Das Programm enthält nur eine Methode welche in einem Satz nach einem Buchstaben
+ * sucht und den Index von diesem dann an das andere Programm zurück gibt
+ * @author Linus Dehner
+ * @version 28.05.2017
+ */
+public class M_4_2_1_suchen {
+
+/**
+ * 
+ * @param satz holt den Satz aus dem anderen Programm in die Methode
+ * @param gesucht holt den gesuchten Buchstaben aus dem anderen Programm in die Methode
+ * @return gibt den Index des als ersten gefundenen Buchstabens zurück
+ */
+public static int suchen(String satz, String gesucht){
+	 int stelle = -1;
+	 int laenge;
+	 char zeichen;
+	 int lang = 0;
+	 char ges = gesucht.charAt(0);
+	 laenge = satz.length() - 1;
+	 boolean schleife = true;
+
+	 for(;laenge >= 0;lang++){
+		 if (schleife == true){
+			 zeichen = satz.charAt(lang);
+			 if(ges == zeichen){
+				 stelle = lang;
+				 schleife = false;
+			 }
+		 }
+	 }
+	return stelle;
+}
+}

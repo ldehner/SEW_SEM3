@@ -1,0 +1,43 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_3_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int tag;
+		int monat;
+		int jahr;
+		int wochentag;
+		String x = "";
+		tag = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie den Tag ein (tt)"));
+		monat = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie ihr Monat ein (mm)"));
+		jahr = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie ihr Jahr ein (jjjj)"));
+		wochentag = M_4_3_2_methode.wochenTag(tag, monat, jahr);
+		switch (wochentag){
+			case 0:
+				x = "Sonntag";
+				break;
+			case 1:
+				x = "Montag";
+				break;
+			case 2:
+				x = "Dienstag";
+				break;
+			case 3:
+				x = "Mittwoch";
+				break;
+			case 4:
+				x = "Donnerstag";
+				break;
+			case 5:
+				x = "Freitag";
+				break;
+			case 6:
+				x = "Samstag";
+				break;
+		}
+		JOptionPane.showMessageDialog(null, "Es ist/war der Wochentag "+x);
+	}
+
+}

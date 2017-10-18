@@ -1,0 +1,11 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_2_2_analyse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

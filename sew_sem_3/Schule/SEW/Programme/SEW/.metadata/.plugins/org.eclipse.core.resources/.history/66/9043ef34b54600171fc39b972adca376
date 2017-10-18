@@ -1,0 +1,40 @@
+package SEW_3;
+import javax.swing.*;
+/**
+ * das Programm enthält nur eine Methode die Überprüft ob ein Wort ein Palindrom ist
+ * @author Linus Dehner
+ * @version 28.05.2017
+ */
+public class M_4_2_3_palindrom {
+/**
+ * Die Methode nimmt ein Wort aus einem anderen Programm und überprüft ob dieses 
+ * ein Palindrom ist und gibt dann zurück ob es ein Palindrom ist
+ * @param eingabe holt die Eingabe aus dem anderen Programm in die Methode
+ * @return ob das Wort ein Palindrom ist
+ */
+	public static boolean wortpalindrom(String eingabe){
+		boolean palindrom = true;
+		 int laenge;
+		 char zeichen;
+		 int mal;
+		 char vorne;
+		 int vorn = 0;
+		 int hintn;
+		 char hinten;
+		 laenge = eingabe.length();
+		 hintn = laenge-1;
+		 mal = (laenge/2)+1;
+		 boolean schleife = true;
+
+		 for(;mal >= 0 && palindrom == true;mal--){
+			 vorne = eingabe.charAt(vorn);
+			 hinten = eingabe.charAt(hintn);
+			 if(vorne != hinten){
+				 palindrom = false;
+			 }
+			 
+		 }	
+		
+		return palindrom;
+	}
+}

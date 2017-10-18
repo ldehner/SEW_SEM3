@@ -1,0 +1,74 @@
+package SEW_3;
+import javax.swing.*;
+/**
+ * Das Programm enthält 3 Methoden zum trennen von Tag, Monat und Jahr
+ * @author Linus Dehner
+ * @version 28.05.2017
+ */
+public class M_4_2_5_methoden {
+
+	public static int tag(String datum){
+		int tag = 0;
+		String day;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		
+		if(tt == '.'){
+			day = "" + t;
+		}
+		else{
+			day =""+t+tt;
+		}
+		tag = Integer.parseInt(day);
+		
+		return tag;
+	
+	}
+	public static int monat(String datum){
+		int monat = 0;
+		String month;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		char point = datum.charAt(2);
+		char m = datum.charAt(3);
+		char mm = datum.charAt(4);
+		
+		if(tt == '.'){
+			if(mm == '.'){
+				month = "" + point + m;
+			}
+			else{
+				month = "" + point;
+			}
+			
+		}
+		else{
+			month =""+m+mm;
+		}
+		monat = Integer.parseInt(month);
+		
+		
+		return monat;
+	}
+	public static int jahr(String datum){
+		char j;
+		int jahr;
+		int index = 0;
+		int z = 1;
+		String year = "";
+		while(datum.charAt(index++) != '.');
+		while(datum.charAt(index++) != '.');
+		for(;index < datum.length() && z == 1;index++) {
+			j = datum.charAt(index);
+			if(j != '.') {
+				year = year + j;
+			}
+			else{
+				z--;
+			}
+		}
+		jahr = Integer.parseInt(year);
+		return jahr;
+	}
+
+}

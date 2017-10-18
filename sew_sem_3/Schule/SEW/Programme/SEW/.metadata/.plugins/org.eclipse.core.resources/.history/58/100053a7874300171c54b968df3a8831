@@ -1,0 +1,30 @@
+package SEW_3;
+import javax.swing.*;
+/**
+ * 
+ * @author Linus Dehner
+ * @version 28.05.2017
+ */
+public class M_4_2_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String satz = JOptionPane.showInputDialog(null, "Ihr Satz:");
+		String gesucht = JOptionPane.showInputDialog(null, "Ihr gesuchter Buchstabe:");
+		int buchstabenstelle = M_4_2_2_analyse.suchen(satz, gesucht);
+		int buchstabenanzahl = M_4_2_2_analyse.buchstabezählen(satz, gesucht);
+		int ignore = M_4_2_2_analyse.ignore(satz, gesucht);
+		int rang = M_4_2_2_analyse.rang(satz, gesucht);
+		int stelle = buchstabenstelle + 1;
+		int ignorestelle = ignore + 1;
+		if(buchstabenstelle >= 0){
+		JOptionPane.showMessageDialog(null, "Der Buchstabe "+gesucht+" wurde an dem Index "+buchstabenstelle+" ( "+stelle+". Stelle ) als 1. gefunden!"
+				+ "\nDer Buchstabe "+gesucht+" kommt "+buchstabenanzahl+" mal vor!"
+						+ "Der Buchstabe "+gesucht+" wurde an dem Index "+ignore+" ( "+ignorestelle+". Stelle ) als 1. gefunden, da wir die Buchstabengröße ignorieren!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Der Buchstabe "+gesucht+" wurde nicht gefunden (er kommt 0 mal vor)!");
+		}
+	}
+
+}

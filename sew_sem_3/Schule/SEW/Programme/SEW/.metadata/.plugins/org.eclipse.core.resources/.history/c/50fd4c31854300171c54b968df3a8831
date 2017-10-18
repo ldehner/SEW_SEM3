@@ -1,0 +1,15 @@
+package SEW_3;
+import javax.swing.*;
+/**
+ * 
+ * @author Linus Dehner
+ * @version 28.05.2017
+ */
+public class M_4_2_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

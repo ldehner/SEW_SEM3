@@ -1,0 +1,23 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_3_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double a = 0;
+		double b = 0;
+		char zeichen;
+		double ergebnis;
+		a = Double.parseDouble(JOptionPane.showInputDialog("Geben Sie die erste Zahl ein"));
+		b = Double.parseDouble(JOptionPane.showInputDialog("Geben Sie die zweite Zahl ein"));
+		zeichen = JOptionPane.showInputDialog("Geben Sie bitte das Rechenzeichen ein (*|/|+|-)").charAt(0);
+		ergebnis = M_4_3_1_methoden.rechnen(a, b, zeichen);
+		if(ergebnis == 0){
+			JOptionPane.showMessageDialog(null, ergebnis);
+		} else {
+			JOptionPane.showMessageDialog(null, a+" "+zeichen+" "+b+" = "+ergebnis );
+		}
+	}
+
+}

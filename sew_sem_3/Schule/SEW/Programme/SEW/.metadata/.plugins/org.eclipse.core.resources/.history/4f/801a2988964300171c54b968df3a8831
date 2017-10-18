@@ -1,0 +1,36 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_2_5_methoden {
+
+	public static int tag(String datum){
+		int tag = 0;
+		String day;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		
+		if(tt == '.'){
+			
+		}
+		
+		
+		
+		return tag;
+	
+	}
+	public static int monat(String Datum){
+		int monat = 0;
+		
+		
+		
+		return monat;
+	}
+	public static int jahr(String Datum){
+		int jahr = 0;
+		
+		
+		
+		return jahr;
+	}
+
+}

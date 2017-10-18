@@ -1,0 +1,14 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_2_5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String date = JOptionPane.showInputDialog(null, "Geben Sie ein Datum im Format tt.mm.jjjj ein:");
+		JOptionPane.showMessageDialog(null, M_4_2_5_methoden.tag(date));
+		JOptionPane.showMessageDialog(null, M_4_2_5_methoden.monat(date));
+		JOptionPane.showMessageDialog(null, M_4_2_5_methoden.jahr(date));
+	}
+
+}

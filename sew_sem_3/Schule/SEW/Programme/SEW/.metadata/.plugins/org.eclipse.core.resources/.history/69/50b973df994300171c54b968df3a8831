@@ -1,0 +1,84 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_2_5_methoden {
+
+	public static int tag(String datum){
+		int tag = 0;
+		String day;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		
+		if(tt == '.'){
+			day = "" + t;
+		}
+		else{
+			day =""+t+tt;
+		}
+		tag = Integer.parseInt(day);
+		
+		return tag;
+	
+	}
+	public static int monat(String datum){
+		int monat = 0;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		String month;
+		String day;
+		char point = datum.charAt(2);
+		char m = datum.charAt(3);
+		char mm = datum.charAt(4);
+		
+		if(tt == '.'){
+			if(mm == '.'){
+				month = "" + point + m;
+			}
+			else{
+				month = "" + point;
+			}
+			
+		}
+		else{
+			month =""+m+mm;
+		}
+		monat = Integer.parseInt(month);
+		
+		
+		return monat;
+	}
+	public static int jahr(String datum){
+		int jahr = 0;
+		String day;
+		String month;
+		String year;
+		char t = datum.charAt(0);
+		char tt = datum.charAt(1);
+		char pointone = datum.charAt(2);
+		char m = datum.charAt(3);
+		char mm = datum.charAt(4);
+		char pointtwo = datum.charAt(5);
+		char j = datum.charAt(6);
+		char jj = datum.charAt(7);
+		char jjj = datum.charAt(8);
+		char jjjj = datum.charAt(9);
+		
+		if(tt == '.'){
+			if(mm == '.'){
+				month = "" + point + m;
+			}
+			else{
+				month = "" + point;
+			}
+			
+		}
+		else{
+			month =""+m+mm;
+		}
+		monat = Integer.parseInt(month);
+		
+		
+		return jahr;
+	}
+
+}

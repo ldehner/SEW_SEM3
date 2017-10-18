@@ -1,0 +1,26 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_3_1_methode {
+	public static double rechnen(double a, double b, char zeichen){
+		double ergebnis = 0;
+		switch(zeichen){
+			case '*':
+				ergebnis = a * b;
+				break;
+			case '/':
+				ergebnis = a / b;
+				if(b == 0){
+					ergebnis = 0;
+				}
+				break;
+			case '+':
+				ergebnis = a + b;
+				break;
+			case '-':
+				ergebnis = a - b;
+				break;
+		}
+		return ergebnis;
+	}
+}

@@ -1,0 +1,16 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_2_5_methoden {
+
+public static int tag(){
+	
+}
+public static int monat(){
+	
+}
+public static int jahr(){
+	
+}
+
+}

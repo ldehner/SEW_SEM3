@@ -1,0 +1,45 @@
+* Liste der Teilnehmer am Spiel
+* Ein Eintrag pro Zeile,
+* "*" am Beginn kennzeichnet Kommentarzeile
+* Leerzeien, bzw. Zeilen, welche nur aus Blanks bestehen, werden ignoriert
+* Spalten sind durch Strichpunkt getrennt.
+* Spalte 1: Familienname
+* Spalte 2: Vorname
+* Spalte 3: package-name, optional nur bei Umlauten
+* Spalte 4: Moodle-Name
+* Spalte 5: Initialen
+* Spalte 1 muss sein, die restlichen Spalten sind optional,
+* entsprechende Daten leiten sich aus Familenname ab
+
+Bahadoorifar; Ramin
+Benesch; Marie-Louise
+Berger; Maximilian
+Bordan; Andreas
+Bruckner; Denise
+Colakovic; Zeljko
+Dovedan; Marko
+Dvorak; Julian
+Gschiegl; Roman
+Hanslik; Peter
+Hauer; Miriam
+Ilic; Fabian
+Ingram; Anton
+Jungreithmeir; Jakob
+Koscielnicki; Martin
+Kücükcay; John; kuecuekcay
+Loschitz; Nadine
+Lux; Christopher
+Mali; Patrick
+Mejdini; Denis
+Miloradovic; Sascha
+Mohamad; Hassan
+Pavlovic; Ivana
+Radosztics; Lukas
+Reckendorfer; Jasmin
+Schafhauser; Barbara
+Schuh; Patrick
+Schwebler; Matthias
+Seidl; Maximilian
+Smolnig; Daniel
+Spitzmüller; Niklas
+Turan; Abdulmuttalip

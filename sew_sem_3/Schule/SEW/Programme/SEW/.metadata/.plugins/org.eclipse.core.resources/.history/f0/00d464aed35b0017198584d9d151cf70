@@ -1,0 +1,15 @@
+package hamster;
+import javax.swing.*;
+/**
+ * 
+ * @author Linus Dehner
+ * @version 28.06.2017
+ */
+public class hamster {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

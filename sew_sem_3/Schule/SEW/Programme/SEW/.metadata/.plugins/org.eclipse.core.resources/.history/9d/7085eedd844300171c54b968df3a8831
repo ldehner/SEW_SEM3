@@ -1,0 +1,50 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_2_2_analyse {
+
+	/**
+	 * 
+	 * @param satz holt den Satz aus dem anderen Programm in die Methode
+	 * @param gesucht holt den gesuchten Buchstaben aus dem anderen Programm in die Methode
+	 * @return gibt den Index des als ersten gefundenen Buchstabens zurück
+	 */
+	public static int suchen(String satz, String gesucht){
+		 int stelle = -1;
+		 int laenge;
+		 char zeichen;
+		 char ges = gesucht.charAt(0);
+		 laenge = satz.length() - 1;
+		 boolean schleife = true;
+
+		 for(;laenge >= 0;laenge--){
+			 if (schleife == true){
+				 zeichen = satz.charAt(laenge);
+				 if(ges == zeichen){
+					 stelle = laenge;
+				 }
+			 }
+		 }
+		return stelle;
+	}
+	
+	public static int buchstabezählen(String satz, String gesucht){
+		 int stelle = -1;
+		 int laenge;
+		 char zeichen;
+		 char ges = gesucht.charAt(0);
+		 laenge = satz.length() - 1;
+		 boolean schleife = true;
+
+		 for(;laenge >= 0;laenge--){
+			 if (schleife == true){
+				 zeichen = satz.charAt(laenge);
+				 if(ges == zeichen){
+					 stelle = laenge;
+				 }
+			 }
+		 }
+		return stelle;
+	}
+
+}

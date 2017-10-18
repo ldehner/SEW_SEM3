@@ -1,0 +1,93 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_2_2_analyse {
+
+	/**
+	 * 
+	 * @param satz holt den Satz aus dem anderen Programm in die Methode
+	 * @param gesucht holt den gesuchten Buchstaben aus dem anderen Programm in die Methode
+	 * @return gibt den Index des als ersten gefundenen Buchstabens zurück
+	 */
+	public static int suchen(String satz, String gesucht){
+		 int stelle = -1;
+		 int laenge;
+		 char zeichen;
+		 int lang = 0;
+		 char ges = gesucht.charAt(0);
+		 laenge = satz.length() - 1;
+		 boolean schleife = true;
+
+		 for(;lang <= laenge;lang++){
+			 if (schleife == true){
+				 zeichen = satz.charAt(lang);
+				 if(ges == zeichen){
+					 stelle = lang;
+					 schleife = false;
+				 }
+			 }
+		 }
+		return stelle;
+	}
+	
+	public static int buchstabezählen(String satz, String gesucht){
+		 int stelle = -1;
+		 int laenge;
+		 char zeichen;
+		 int lang = 0;
+		 int anzahl = 0;
+		 char ges = gesucht.charAt(0);
+		 laenge = satz.length() - 1;
+
+		 for(;lang <= laenge;lang++){
+				 zeichen = satz.charAt(lang);
+				 if(ges == zeichen){
+					 stelle = lang;
+					 anzahl++;
+				 }
+		 }
+		return anzahl;
+	}
+	public static int ignore(String satz, String gesucht){
+		 int stelle = -1;
+		 int laenge;
+		 char zeichen;
+		 int lang = 0;
+		 char ges = gesucht.toLowerCase().charAt(0);
+		 laenge = satz.length() - 1;
+		 boolean schleife = true;
+
+		 for(;lang <= laenge;lang++){
+			 if (schleife == true){
+				 zeichen = satz.toLowerCase().charAt(lang);
+				 if(ges == zeichen){
+					 stelle = lang;
+					 schleife = false;
+				 }
+			 }
+		 }
+		return stelle;
+	}
+	public static int rang(String satz, String gesucht){
+		String neusatz = satz.toLowerCase();
+		 int stelle = -1;
+		 int laenge;
+		 char zeichen;
+		 int lang = 0;
+		 char ges = gesucht.toLowerCase().charAt(0);
+		 laenge = satz.length() - 1;
+		 boolean schleife = true;
+
+		 for(;lang <= laenge;lang++){
+			 if (schleife == true){
+				 zeichen = neusatz.charAt(lang);
+				 if(ges == zeichen){
+					 stelle = lang;
+					 schleife = false;
+				 }
+			 }
+		 }
+		return stelle;
+	}
+
+}

@@ -1,0 +1,20 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_3_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char operator;
+		String plus = "+";
+		String minus = "-";
+		String durch = "/";
+		String mal = "*";
+		String eingabe;
+		
+		do{
+			
+		}while(eingabe.equals(plus)||eingabe.equals(minus)||eingabe.equals(mal)||eingabe.equals(durch));
+	}
+
+}

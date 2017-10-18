@@ -1,0 +1,14 @@
+package SEW_3;
+import javax.swing.*;
+
+public class M_4_5_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Strig konstante1;
+		int erste_konstante = 15;
+		konstante1 = JOptionPane.showInputDialog("Erste Konstante:");
+		erste_konstante = Integer.parseInt(konstante1);
+	}
+
+}

@@ -1,0 +1,75 @@
+package SEW_3;
+import javax.swing.*;
+/**
+ * Das Programm beinhaltet Methoden, um sich erstens Tag/Monat/Jahr aus einem gesamten Datum zu merken und eine Methode,
+ * um sich einen Wochentag mithilfe eines Algorythmus und eines Datums zu berechnen
+ * @author Florian Safer
+ * @version 2017-05-29
+ */
+public class M_4_3_2_methode {
+	/**
+	 * Die Methode fischt sich das Tag-Datum aus dem gesamten Datum
+	 * @param eingabe Dieser Parameter beinhaltet das Datum
+	 * @return Zahlen des Tages
+	 */
+	public static int tag (String eingabe){
+		int index;
+		int output = 0;
+		for(index = 0;index < 2;index++){
+			char aktuellesZeichen = eingabe.charAt(index);
+			output = output  * 10 + aktuellesZeichen-'0';
+		}
+		return output;
+	}
+	/**
+	 * Die Methode fischt sich das Monat aus dem gesamten Datum
+	 * @param Dieser Parameter beinhaltet das gesamte Datum
+	 * @return Zahlen des Monats
+	 */
+	public static int monat (String eingabe){
+		int index;
+		int output = 0;
+		for(index = 3;index < 5;index++){
+			char aktuellesZeichen = eingabe.charAt(index);
+			output = output  * 10 + aktuellesZeichen-'0';
+		}
+		return output;
+	}
+	/**
+	 * Die Methode fischt sich das Jahr aus dem gesamten Datum
+	 * @param Dieser Parameter beinhaltet das gesamt Datum
+	 * @return Zahlen des Jahres
+	 */
+	public static int jahr (String eingabe){
+		int index;
+		int output = 0;
+		for(index = 6;index < 10;index++){
+			char aktuellesZeichen = eingabe.charAt(index);
+			output = output  * 10 + aktuellesZeichen-'0';
+		}
+		return output;
+	}
+	/**
+	 * Die Methode berechnet mithilfe eines Algorythmus Den aktuellen Wochentag und gibt ihn zurück
+	 * @param tag Die Datumszahl des Tages
+	 * @param monat Die Datumstahl des Monats
+	 * @param jahr Die Jahreszahl
+	 * @return Eine Zahl, aus der sich die main-Methode den Tag berechnet
+	 */
+	public static int wochenTag (int tag, int monat, int jahr){
+		int a, b, c;
+		if(monat <= 2){
+			monat = monat + 10;
+			jahr = jahr - 1;
+		} else {
+			monat = monat - 2;
+		}
+		a = jahr / 100;
+		b = jahr % 100;
+		c =((26*monat -2)/10+tag+b+b/4+a/4-2*a) % 7;
+		if (c < 0){
+			c = c + 7;
+		}
+		return c;
+	}
+}
