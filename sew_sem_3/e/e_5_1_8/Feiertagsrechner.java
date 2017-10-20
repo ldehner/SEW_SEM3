@@ -55,7 +55,7 @@ public class Feiertagsrechner {
 			wielang = Period.between(datumheuer, currentdate);
 		}
 		Period nextJahr = Period.between(datumheuer, datumnextyear);
-		System.out.println(wielang+"\n"+);
+		System.out.println("VARIABLE wielang"+"\n"+"");
 		
 	}
 }
