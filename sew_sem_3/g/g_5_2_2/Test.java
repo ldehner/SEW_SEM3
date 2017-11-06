@@ -1,5 +1,10 @@
 package g_5_2_2;
 import javax.swing.JOptionPane;
+/**
+ * Ve3r und entschlüsselt ein Wort mit Hilfe der Klasse Verschluesseln
+ * @author Linus Benedikt Dehner
+ * @version 06.11.2017
+ */
 public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

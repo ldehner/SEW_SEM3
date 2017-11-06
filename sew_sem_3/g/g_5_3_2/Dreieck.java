@@ -1,113 +1,114 @@
 package g_5_3_2;
 import g_5_3_1.Punkt2D;
+/**
+ * Die Klasse macht jegliche Sachen mit Dreiecken
+ * @author Linus Benedikt Dehner
+ * @version 06.11.2017
+ */
 public class Dreieck {
-	private double x1;
-	private double y1;
-	private double x2;
-	private double y2;
-	private double x3;
-	private double y3;
-	private double x12;
-	private double y12;
-	private double x22;
-	private double y22;
-	private double x32;
-	private double y32;
+	private Punkt2D p1,p2,p3;
 	private double u;
+	/**
+	 * Dies is der Standardkonstruktor welcher Dem Dreieck Punkte zuweist
+	 */
 	public Dreieck(){
+		Punkt2D p4 = new Punkt2D(1, 1);
+		this.setP1(p4);
+		Punkt2D p5 = new Punkt2D(5, 1);
+		this.setP2(p5);
+		Punkt2D p6 = new Punkt2D(3, 5);
+		this.setP3(p6);
+	}
+	/**
+	 * Der Konstruktor weißt dem Dreieck benutzerdefinierte Punkte zu
+	 * @param x1 holt sich die Variable aus der Testklasse
+	 * @param y1 holt sich die Variable aus der Testklasse
+	 * @param x2 holt sich die Variable aus der Testklasse
+	 * @param y2 holt sich die Variable aus der Testklasse
+	 * @param x3 holt sich die Variable aus der Testklasse
+	 * @param y3 holt sich die Variable aus der Testklasse
+	 */
+	public Dreieck(double x1,double y1, double x2, double y2, double x3, double y3){
+		Punkt2D p1 = new Punkt2D(x1, y1);
+		this.setP1(p1);
+		Punkt2D p2 = new Punkt2D(x2, y2);
+		this.setP2(p2);
+		Punkt2D p3 = new Punkt2D(x3, y3);
+		this.setP3(p3);
 		
 	}
-	public Dreieck(double x1,double y1, double x2, double y2, double x3, double y3,double x12,double y12, double x22, double y22, double x32, double y32){
-		this.setX1(x1);
-		this.setY1(y1);
-		this.setX2(x2);
-		this.setY2(y2);
-		this.setX3(x3);
-		this.setY3(y3);
-		this.setX12(x12);
-		this.setY2(y12);
-		this.setX22(x22);
-		this.setY22(y22);
-		this.setX32(x32);
-		this.setY32(y32);
+	/**
+	 * Gibt p1 zurück
+	 * @return p1
+	 */
+	public Punkt2D getP1() {
+		return p1;
 	}
-	public void setX1(double x) {
-		this.x1 = x;
+	/**
+	 * setzt p1 auf den benutzerdefinierten wert
+	 * @param holt sich den Punkt aus dem Konstruktor
+	 */
+	public void setP1(Punkt2D p1) {
+		this.p1 = p1;
 	}
-	public void setY1(double y) {
-		this.y1 = y;
+	/**
+	 * Gibt p2 zurück
+	 * @return p2
+	 */
+	public Punkt2D getP2() {
+		return p2;
 	}
-	public double getX1() {
-		return this.x1;
+	/**
+	 * setzt p2 auf den benutzerdefinierten wert
+	 * @param holt sich den Punkt aus dem Konstruktor
+	 */
+	public void setP2(Punkt2D p2) {
+		this.p2 = p2;
 	}
-	public double getY1() {
-		return this.y1;
+	/**
+	 * Gibt p3 zurück
+	 * @return p3
+	 */
+	public Punkt2D getP3() {
+		return p3;
 	}
-	public void setX2(double x) {
-		this.x2 = x;
+	/**
+	 * Setzt p3 auf den benutzerdefinierten Wert
+	 * @param holt sich den Punkt aus dem Konstruktor
+	 */
+	public void setP3(Punkt2D p3) {
+		this.p3 = p3;
 	}
-	public void setY2(double y) {
-		this.y2 = y;
-	}
-	public double getX2() {
-		return this.x2;
-	}
-	public double getY2() {
-		return this.y2;
-	}
-	public void setX3(double x) {
-		this.x3 = x;
-	}
-	public void setY3(double y) {
-		this.y3 = y;
-	}
-	public double getX3() {
-		return this.x3;
-	}
-	public double getY3() {
-		return this.y3;
-	}
-	public void setX12(double x) {
-		this.x12 = x;
-	}
-	public void setY12(double y) {
-		this.y12 = y;
-	}
-	public double getX12() {
-		return this.x12;
-	}
-	public double getY12() {
-		return this.y12;
-	}
-	public void setX22(double x) {
-		this.x22 = x;
-	}
-	public void setY22(double y) {
-		this.y22 = y;
-	}
-	public double getX22() {
-		return this.x22;
-	}
-	public double getY22() {
-		return this.y22;
-	}
-	public void setX32(double x) {
-		this.x32 = x;
-	}
-	public void setY32(double y) {
-		this.y32 = y;
-	}
-	public double getX32() {
-		return this.x3;
-	}
-	public double getY32() {
-		return this.y3;
-	}
+	/**
+	 * Errechnet mit Hilfe der Abstand Methode aus der Klasse Punkt2D den Umfang
+	 * @return den Umfang
+	 */
 	public double umfang() {
-		double ab1 = Punkt2D.abstand(x1, y1, x2, y2);
-		double ab2 = Punkt2D.abstand(x2, y2, x3, y3);
-		double ab3 = Punkt2D.abstand(x3, y3, x1, y1);
+		double ab1 = Punkt2D.abstand(this.p1, this.p2);
+		double ab2 = Punkt2D.abstand(this.p2,this.p3);
+		double ab3 = Punkt2D.abstand(this.p3,this.p1);
 		this.u = ab1+ab2+ab3;
 		return this.u;
+	}
+	/**
+	 * Überprüft ob die 2 Dreiecke die Selben sind
+	 * @param toCompare holt sich das 2. Dreieck aus der Testklasse
+	 * @return ob die zwei Dreiecke überein stimmen
+	 */
+	public boolean equals(Dreieck toCompare) {
+		boolean equals = false;
+		equals = getP1().equals(toCompare.getP1()) && getP2().equals(toCompare.getP2()) && getP3().equals(toCompare.getP3());
+		return equals;
+	}
+	/**
+	 * Gibt die Daten der Dreiecke mit Hilfe der Methode textDaten aus der Klasse Punkt2D zurück
+	 * @return die Daten
+	 */
+	public String Daten() {
+		String pu1 = this.p1.textDaten();
+		String pu2 = this.p2.textDaten();
+		String pu3 = this.p3.textDaten();
+		return pu1+" "+pu2+" "+pu3;
+		
 	}
 }

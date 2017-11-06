@@ -1,4 +1,4 @@
-package g_5_3_3;
+package g_5_3_4;
 
 import java.util.Scanner;
 /**
@@ -7,16 +7,16 @@ import java.util.Scanner;
  * @version 06.11.2017
  */
 public class Test {
-
 	public static void main(String[] args) {
-		
-		Scanner s = new Scanner(System.in);
+		Scanner s = new Scanner(System.in); 
 		System.out.println("Geben Sie eimen fixen Bruch an:");
 		System.out.println("Geben Sie bitte den 1. Zähler ein!");
 		int z1 = Integer.parseInt( s.nextLine());
 		System.out.println("Geben Sie bitte den 1. Nenner ein!");
 		int n1 = Integer.parseInt( s.nextLine());
 		Bruchzahl b = new Bruchzahl(z1,n1);
+		System.out.println("Ihr Bruch:\n\n"+b.textForm()+"\n\n");
+		System.out.println("Ihr Bruch in Dezimalform:\n\n"+b.dezimalWert()+"\n\n");
 		System.out.println("Geben Sie eine Zahl zum erweitern ihres Bruches an:");
 		int e = Integer.parseInt( s.nextLine());
 		b.erweitern(e);
@@ -34,7 +34,7 @@ public class Test {
 		System.out.println("Multiplikation:\n\n"+b.multipliziere(z).textForm()+"\n\n");
 		System.out.println("Division:\n\n"+b.dividieren(z).textForm()+"\n\n");
 		System.out.println("Invertiert:\n\n"+b.invertieren(b).textForm()+"\n\n");	
+		System.out.println("Umgedreht:\n\n"+Bruchzahl.umdrehen(b));
 		s.close();
 	}
-
 }

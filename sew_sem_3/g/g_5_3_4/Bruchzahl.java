@@ -1,4 +1,4 @@
-package g_5_3_3;
+package g_5_3_4;
 /**
  * Die Klasse erstellt einen Bruch und rechnet mit Brüchen
  * @author Linus Benedikt Dehner
@@ -221,5 +221,15 @@ public class Bruchzahl {
 		z.setNenner(z.getZaehler());
 		z.setZaehler(nenner);
 		return z;
+	}
+	/**
+	 * Dreht einen Bruch um
+	 * @param z holt sich den Bruch aus der Test Klasse
+	 * @return den umgedrehten Bruch
+	 */
+	public static Bruchzahl umdrehen(Bruchzahl z) {
+		Bruchzahl n = new Bruchzahl(z.getNenner(), z.getZaehler());
+		return n;
+		
 	}
 }
