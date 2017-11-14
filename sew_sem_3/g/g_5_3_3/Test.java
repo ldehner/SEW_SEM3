@@ -33,7 +33,8 @@ public class Test {
 		System.out.println("Subtraktion:\n\n"+b.subtrahieren(z).textForm()+"\n\n");
 		System.out.println("Multiplikation:\n\n"+b.multipliziere(z).textForm()+"\n\n");
 		System.out.println("Division:\n\n"+b.dividieren(z).textForm()+"\n\n");
-		System.out.println("Invertiert:\n\n"+b.invertieren(b).textForm()+"\n\n");	
+		System.out.println("Invertiert:\n\n"+b.invertieren(b).textForm()+"\n\n");
+		
 		s.close();
 	}
 
